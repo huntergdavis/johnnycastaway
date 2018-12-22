@@ -19,11 +19,6 @@
         height:100vh;
       }
     </style>
-  </head>
-  <body>
-
-    <div id="dosbox"></div>`
-    <br/>
     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
     <script type="text/javascript">
       var dosbox = new Dosbox({
@@ -34,7 +29,16 @@
         onrun: function (dosbox, app) {
           console.log("App '" + app + "' is runned");
         }
-      }).UI({id: 'dosbox'});;
+      });
+      function shittyclickker() {
+        document.getElementById('dosbox').click();
+      }
     </script>
+  </head>
+  <body onload="shittyclickker()">
+
+    <div id="dosbox"></div>`
+    <br/>
+
   </body>
 </html>
