@@ -12,13 +12,16 @@
         -o-background-size: cover;
         background-size: cover; }
       .dosbox-container >   .dosbox-canvas {min-width:1920; min-height:2560;}
-
       .dosbox-start { font-size: 35px !important;}
-
+      div {
+        height:100vh;
+      }
     </style>
-
   </head>
-  <body >
+  <body>
+
+    <div id="dosbox"></div>`
+    <br/>
     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
     <script type="text/javascript">
       var dosbox = new Dosbox({
@@ -29,11 +32,7 @@
         onrun: function (dosbox, app) {
           console.log("App '" + app + "' is runned");
         }
-      });
-
+      }).UI({id: 'dosbox'});;
     </script>
-    <div id="dosbox"></div>
-    <br/>
-
   </body>
 </html>
