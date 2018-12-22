@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Johnny Castaway</title>
+    <style type="text/css">
+      .dosbox-container > .dosbox-overlay { background: url(https://raw.githubusercontent.com/huntergdavis/johnnycastaway/master/web/johnnytitle.gif); }
+      .dosbox-start { font-size: 35px !important;}
+    </style>
+  </head>
+  <body>
+    <div id="dosbox"></div>
+    <br/>
+
+    <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
+    <script type="text/javascript">
+      var dosbox = new Dosbox({
+        id: "dosbox",
+        onload: function (dosbox) {
+          dosbox.run("https://github.com/huntergdavis/johnnycastaway/raw/master/web/johnny.zip", "./runwin.bat");
+        },
+        onrun: function (dosbox, app) {
+          console.log("App '" + app + "' is runned");
+        }
+      });
+    </script>
+  </body>
+</html>
