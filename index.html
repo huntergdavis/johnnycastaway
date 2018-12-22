@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Johnny Castaway</title>
     <style type="text/css">
-      .dosbox-container {height:2560;  width:1920;text-align: center; }
+      .dosbox-container {min-height:2560;  min-width:1920; text-align: center; }
       .dosbox-container > .dosbox-overlay { background: url(https://raw.githubusercontent.com/huntergdavis/johnnycastaway/master/johnnytitle.gif) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -32,7 +32,7 @@
         onrun: function (dosbox, app) {
           console.log("App '" + app + "' is runned");
         }
-      });
+      }).UI({id: 'dosbox'});;
     </script>
   </body>
 </html>
