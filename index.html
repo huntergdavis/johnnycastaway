@@ -18,7 +18,7 @@
       var dosbox = new Dosbox({
         id: "dosbox",
         onload: function (dosbox) {
-          dosbox.run("https://github.com/huntergdavis/johnnycastaway/raw/master/web/johnny.zip", "./runwin.bat");
+          dosbox.run("./johnny.zip", "./runwin.bat");
         },
         onrun: function (dosbox, app) {
           console.log("App '" + app + "' is runned");
