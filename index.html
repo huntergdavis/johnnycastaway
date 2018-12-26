@@ -33,6 +33,27 @@
         }
       });
 
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+      }
+
+      function getZoomFromUrl(){
+        var parameter = "zoom";
+          var urlparameter = 1; // default zoom to 1, effectively unset
+          if(window.location.href.indexOf(parameter) > -1){
+              urlparameter = getUrlVars()[parameter];
+              }
+          return urlparameter;
+      }
+
+      var zoomLevel = getUrlVars()["zoom"];
+
+      document.getElementById("body").style.zoom = zoomLevel;
+
       document.getElementsByClassName('dosbox-start')[0].click();
     </script>
   </body>
