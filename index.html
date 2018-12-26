@@ -13,7 +13,7 @@
 
       body {
         background-color: #0000aa;
-        zoom: 4.5;
+        zoom: 1;
         overflow:hidden;
       }
 
@@ -52,7 +52,7 @@
 
       var zoomLevel = getUrlVars()["zoom"];
 
-      document.getElementById("body").style.zoom = zoomLevel;
+      document.body.style.zoom = zoomLevel;
 
       document.getElementsByClassName('dosbox-start')[0].click();
     </script>
